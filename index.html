@@ -2,28 +2,40 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monkey D. Luffy - Personaje</title>
 
     <style>
+        /* ===== ESTILO GENERAL ===== */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-image: url('https://wallpapercave.com/wp/wp6933510.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #d62828;
+            background-color: rgba(214, 40, 40, 0.95);
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
         }
 
         /* ===== MENÚ DE NAVEGACIÓN ===== */
         nav {
-            background-color: #003049;
-            padding: 10px;
+            background-color: rgba(0, 48, 73, 0.95);
+            padding: 12px;
             text-align: center;
+            position: sticky;
+            top: 0;
         }
 
         nav ul {
@@ -42,6 +54,7 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 16px;
+            transition: color 0.3s;
         }
 
         nav ul li a:hover {
@@ -50,36 +63,92 @@
 
         /* ===== SECCIONES ===== */
         section {
-            padding: 20px;
-            margin: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 25px;
+            margin: 30px auto;
+            width: 85%;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: aparecer 1s forwards;
+        }
+
+        @keyframes aparecer {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         section:hover {
             transform: scale(1.02);
-            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            box-shadow: 0 0 25px rgba(0,0,0,0.3);
         }
 
         img {
             display: block;
             margin: 0 auto;
             width: 250px;
-            border-radius: 10px;
+            border-radius: 12px;
         }
 
         h2 {
             color: #d62828;
+            text-align: center;
         }
 
+        ul {
+            padding-left: 20px;
+        }
+
+        /* ===== BOTÓN ===== */
+        button {
+            display: block;
+            margin: 15px auto;
+            background-color: #d62828;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #f77f00;
+        }
+
+        /* ===== FOOTER ===== */
         footer {
             text-align: center;
-            background-color: #003049;
+            background-color: rgba(0, 48, 73, 0.95);
             color: white;
-            padding: 10px;
+            padding: 15px;
         }
+
+        footer a {
+            color: #fcbf49;
+            text-decoration: none;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 600px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            img {
+                width: 180px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+        }
+
     </style>
 </head>
 
@@ -96,6 +165,7 @@
         <li><a href="#info">Información</a></li>
         <li><a href="#habilidades">Habilidades</a></li>
         <li><a href="#personalidad">Personalidad</a></li>
+        <li><a href="#recompensa">Recompensa</a></li>
     </ul>
 </nav>
 
@@ -115,7 +185,7 @@
 <section id="habilidades">
     <h2>Habilidades</h2>
     <ul>
-        <li>Usuario de la Fruta del Diablo (Gomu Gomu no Mi / Hito Hito no Mi modelo Nika)</li>
+        <li>Usuario de la Fruta del Diablo (Hito Hito no Mi modelo Nika)</li>
         <li>Gran fuerza física</li>
         <li>Haki del Rey (Haoshoku)</li>
         <li>Haki de Observación</li>
@@ -130,11 +200,33 @@
         Su sueño es convertirse en el Rey de los Piratas encontrando el legendario tesoro "One Piece". 
         Valora profundamente la amistad y nunca abandona a sus compañeros.
     </p>
+
+    <button onclick="mensaje()">Frase de Luffy</button>
+</section>
+
+<section id="recompensa">
+    <h2>Recompensa</h2>
+    <p><strong>Recompensa actual:</strong> 3,000,000,000 Berries</p>
+    <p>
+        Luffy es uno de los piratas más buscados por el Gobierno Mundial debido a su gran poder,
+        liderazgo y su creciente influencia en el Nuevo Mundo.
+    </p>
 </section>
 
 <footer>
     <p>Página creada para presentación de personaje - 2026</p>
+    <p>
+        <a href="#">Instagram</a> | 
+        <a href="#">Twitter</a> | 
+        <a href="#">YouTube</a>
+    </p>
 </footer>
+
+<script>
+    function mensaje() {
+        alert("¡Yo seré el Rey de los Piratas! - Monkey D. Luffy");
+    }
+</script>
 
 </body>
 </html>
