@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Monkey D. Luffy - Personaje</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -10,28 +11,69 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             background-color: #d62828;
             color: white;
             text-align: center;
             padding: 20px;
         }
+
+        /* ===== MENÚ DE NAVEGACIÓN ===== */
+        nav {
+            background-color: #003049;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: #fcbf49;
+        }
+
+        /* ===== SECCIONES ===== */
         section {
             padding: 20px;
             margin: 20px;
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+
         img {
             display: block;
             margin: 0 auto;
             width: 250px;
             border-radius: 10px;
         }
+
         h2 {
             color: #d62828;
         }
+
         footer {
             text-align: center;
             background-color: #003049;
@@ -40,6 +82,7 @@
         }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -47,11 +90,20 @@
     <p>El futuro Rey de los Piratas</p>
 </header>
 
+<!-- MENÚ -->
+<nav>
+    <ul>
+        <li><a href="#info">Información</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#personalidad">Personalidad</a></li>
+    </ul>
+</nav>
+
 <section>
     <img src="https://upload.wikimedia.org/wikipedia/en/c/cb/Monkey_D_Luffy.png" alt="Monkey D. Luffy">
 </section>
 
-<section>
+<section id="info">
     <h2>Información General</h2>
     <p><strong>Nombre completo:</strong> Monkey D. Luffy</p>
     <p><strong>Edad:</strong> 19 años</p>
@@ -60,7 +112,7 @@
     <p><strong>Anime/Manga:</strong> One Piece</p>
 </section>
 
-<section>
+<section id="habilidades">
     <h2>Habilidades</h2>
     <ul>
         <li>Usuario de la Fruta del Diablo (Gomu Gomu no Mi / Hito Hito no Mi modelo Nika)</li>
@@ -71,7 +123,7 @@
     </ul>
 </section>
 
-<section>
+<section id="personalidad">
     <h2>Personalidad</h2>
     <p>
         Luffy es un joven alegre, optimista y extremadamente valiente. 
