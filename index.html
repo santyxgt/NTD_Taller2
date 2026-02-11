@@ -197,6 +197,12 @@
     <header>
         <h1>Monkey D. Luffy</h1>
         <p>El futuro Rey de los Piratas</p>
+
+        <div style="text-align:center; margin:15px;">
+            <button onclick="playMusic()">▶ Reproducir Música</button>
+            <button onclick="pauseMusic()">⏸ Pausar Música</button>
+        </div>
+
     </header>
 
     <!-- MENÚ -->
@@ -275,6 +281,22 @@
         }
 
     </script>
+    <script>
+        const audio = document.getElementById("musica");
+
+        function playMusic() {
+            audio.play();
+        }
+
+        function pauseMusic() {
+            audio.pause();
+        }
+    </script>
+
+    <audio id="musica" loop>
+        <source src="weare.mp3" type="audio/mpeg">
+
+    </audio>
 
 </body>
 
