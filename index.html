@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,7 +69,7 @@
             width: 85%;
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 12px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             opacity: 0;
             transform: translateY(30px);
             animation: aparecer 1s forwards;
@@ -83,7 +84,7 @@
 
         section:hover {
             transform: scale(1.02);
-            box-shadow: 0 0 25px rgba(0,0,0,0.3);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
         }
 
         img {
@@ -149,84 +150,132 @@
             }
         }
 
+
+        #btnModoOscuro {
+            background: #fcbf49;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        #btnModoOscuro:hover {
+            background: #f77f00;
+        }
+
+        body.dark-mode {
+            background-image: none;
+            background-color: #121212;
+        }
+
+        body.dark-mode header {
+            background-color: #1f1f1f;
+        }
+
+        body.dark-mode nav {
+            background-color: #111;
+        }
+
+        body.dark-mode section {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+
+        body.dark-mode h2 {
+            color: #fcbf49;
+        }
+
+        body.dark-mode footer {
+            background-color: #111;
+        }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Monkey D. Luffy</h1>
-    <p>El futuro Rey de los Piratas</p>
-</header>
+    <header>
+        <h1>Monkey D. Luffy</h1>
+        <p>El futuro Rey de los Piratas</p>
+    </header>
 
-<!-- MENÚ -->
-<nav>
-    <ul>
-        <li><a href="#info">Información</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#personalidad">Personalidad</a></li>
-        <li><a href="#recompensa">Recompensa</a></li>
-    </ul>
-</nav>
+    <!-- MENÚ -->
+    <nav>
+        <ul>
+            <li><a href="#info">Información</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#personalidad">Personalidad</a></li>
+            <li><a href="#recompensa">Recompensa</a></li>
+            <li>
+                <button id="btnModoOscuro" onclick="toggleDarkMode()">🌙</button>
+            </li>
 
-<section>
-    <img src="https://upload.wikimedia.org/wikipedia/en/c/cb/Monkey_D_Luffy.png" alt="Monkey D. Luffy">
-</section>
+        </ul>
+    </nav>
 
-<section id="info">
-    <h2>Información General</h2>
-    <p><strong>Nombre completo:</strong> Monkey D. Luffy</p>
-    <p><strong>Edad:</strong> 19 años</p>
-    <p><strong>Origen:</strong> Villa Foosha</p>
-    <p><strong>Ocupación:</strong> Capitán de los Piratas del Sombrero de Paja</p>
-    <p><strong>Anime/Manga:</strong> One Piece</p>
-</section>
+    <section>
+        <img src="https://upload.wikimedia.org/wikipedia/en/c/cb/Monkey_D_Luffy.png" alt="Monkey D. Luffy">
+    </section>
 
-<section id="habilidades">
-    <h2>Habilidades</h2>
-    <ul>
-        <li>Usuario de la Fruta del Diablo (Hito Hito no Mi modelo Nika)</li>
-        <li>Gran fuerza física</li>
-        <li>Haki del Rey (Haoshoku)</li>
-        <li>Haki de Observación</li>
-        <li>Haki de Armamento</li>
-    </ul>
-</section>
+    <section id="info">
+        <h2>Información General</h2>
+        <p><strong>Nombre completo:</strong> Monkey D. Luffy</p>
+        <p><strong>Edad:</strong> 19 años</p>
+        <p><strong>Origen:</strong> Villa Foosha</p>
+        <p><strong>Ocupación:</strong> Capitán de los Piratas del Sombrero de Paja</p>
+        <p><strong>Anime/Manga:</strong> One Piece</p>
+    </section>
 
-<section id="personalidad">
-    <h2>Personalidad</h2>
-    <p>
-        Luffy es un joven alegre, optimista y extremadamente valiente. 
-        Su sueño es convertirse en el Rey de los Piratas encontrando el legendario tesoro "One Piece". 
-        Valora profundamente la amistad y nunca abandona a sus compañeros.
-    </p>
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>Usuario de la Fruta del Diablo (Hito Hito no Mi modelo Nika)</li>
+            <li>Gran fuerza física</li>
+            <li>Haki del Rey (Haoshoku)</li>
+            <li>Haki de Observación</li>
+            <li>Haki de Armamento</li>
+        </ul>
+    </section>
 
-    <button onclick="mensaje()">Frase de Luffy</button>
-</section>
+    <section id="personalidad">
+        <h2>Personalidad</h2>
+        <p>
+            Luffy es un joven alegre, optimista y extremadamente valiente.
+            Su sueño es convertirse en el Rey de los Piratas encontrando el legendario tesoro "One Piece".
+            Valora profundamente la amistad y nunca abandona a sus compañeros.
+        </p>
 
-<section id="recompensa">
-    <h2>Recompensa</h2>
-    <p><strong>Recompensa actual:</strong> 3,000,000,000 Berries</p>
-    <p>
-        Luffy es uno de los piratas más buscados por el Gobierno Mundial debido a su gran poder,
-        liderazgo y su creciente influencia en el Nuevo Mundo.
-    </p>
-</section>
+        <button onclick="mensaje()">Frase de Luffy</button>
+    </section>
 
-<footer>
-    <p>Página creada para presentación de personaje - 2026</p>
-    <p>
-        <a href="#">Instagram</a> | 
-        <a href="#">Twitter</a> | 
-        <a href="#">YouTube</a>
-    </p>
-</footer>
+    <section id="recompensa">
+        <h2>Recompensa</h2>
+        <p><strong>Recompensa actual:</strong> 3,000,000,000 Berries</p>
+        <p>
+            Luffy es uno de los piratas más buscados por el Gobierno Mundial debido a su gran poder,
+            liderazgo y su creciente influencia en el Nuevo Mundo.
+        </p>
+    </section>
 
-<script>
-    function mensaje() {
-        alert("¡Yo seré el Rey de los Piratas! - Monkey D. Luffy");
-    }
-</script>
+    <footer>
+        <p>Página creada para presentación de personaje - 2026</p>
+        <p>
+            <a href="#">Instagram</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">YouTube</a>
+        </p>
+    </footer>
+
+    <script>
+        function mensaje() {
+            alert("¡Yo seré el Rey de los Piratas! - Monkey D. Luffy");
+        }
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+
+    </script>
 
 </body>
+
 </html>
