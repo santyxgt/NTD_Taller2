@@ -189,10 +189,21 @@
         body.dark-mode footer {
             background-color: #111;
         }
+
+        #barraProgreso {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            width: 0%;
+            background: linear-gradient(90deg, #fcbf49, #f77f00);
+            z-index: 9999;
+        }
     </style>
 </head>
 
 <body>
+    <div id="barraProgreso"></div>
 
     <header>
         <h1>Monkey D. Luffy</h1>
@@ -279,6 +290,13 @@
         function toggleDarkMode() {
             document.body.classList.toggle("dark-mode");
         }
+        window.onscroll = function () {
+            let scrollTop = document.documentElement.scrollTop;
+            let altura = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let progreso = (scrollTop / altura) * 100;
+            document.getElementById("barraProgreso").style.width = progreso + "%";
+        };
+
 
     </script>
     <script>
